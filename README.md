@@ -1,0 +1,1 @@
+# Please include a folder with all the csv data. The folder name should be "data_store_sales"
