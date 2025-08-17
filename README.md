@@ -36,7 +36,7 @@ Sales forecasting plays a crucial role in retail and supply chain optimization. 
 1. Download the csv files from google drive and store them in this folder data_store_sales/.
 (# Raw CSV files (items.csv, stores.csv, transactions. csv, oil.csv, holidays_events.csv, train.csv, etc.))
 
-Link: https://drive.google.com/drive/folders/1nSScpYliGbfFyFLaFafVOd1ladT4XyN2?usp=sharing
+	- Link: https://drive.google.com/drive/folders/1nSScpYliGbfFyFLaFafVOd1ladT4XyN2?usp=sharing
 
 
 
@@ -84,10 +84,10 @@ The datasets are stored in the data_store_sales/ folder.
 	3.	Outlier Analysis – Identifying extreme values in sales & transactions.
 	4.	Filling Missing Dates with Zero Sales – Ensuring continuous daily data.
 	5.	Merging Full Range Dataset – Combining:
-	•	Outlier-adjusted sales
-	•	Oil prices
-	•	Transactions
-	•	Holidays
+		- Outlier-adjusted sales
+		- Oil prices
+		- Transactions
+		- Holidays
 
 ⸻
 
