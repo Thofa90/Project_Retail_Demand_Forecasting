@@ -33,7 +33,12 @@ Sales forecasting plays a crucial role in retail and supply chain optimization. 
 
 # 📂 Project Structure
 
-1. data_store_sales/.    # Raw CSV files (items.csv, stores.csv, transactions. csv, oil.csv, holidays_events.csv, train.csv, etc.)
+1. Download the csv files from google drive and store them in this folder data_store_sales/.
+(# Raw CSV files (items.csv, stores.csv, transactions. csv, oil.csv, holidays_events.csv, train.csv, etc.))
+
+Link: https://drive.google.com/drive/folders/1nSScpYliGbfFyFLaFafVOd1ladT4XyN2?usp=sharing
+
+
 
 2. DataLoad_EDA_Merging.ipynb.    # File 1 - Data loading, cleaning, preprocessing & EDA
 
@@ -200,41 +205,42 @@ Based on the comparison:
   ## 🔍 Model Selection Flow
 
 When deciding which forecasting model to use:
+```
             ┌────────────────────┐
             │   Size of Data?    │
             └─────────┬──────────┘
                       │
       ┌───────────────┴───────────────┐
 Small / Medium Data             Large / Complex Data
-│                               │
+       │                               │
 ┌──────▼──────┐                 ┌──────▼───────┐
 │   ARIMAX    │                 │   XGBoost    │
 │ (best for   │                 │ (handles     │
 │ explainable │                 │ non-linear   │
 │ forecasts)  │                 │ features)    │
 └─────────────┘                 └──────────────┘
-│                               │
-│                               │
-│                               │
+       │                               │
+       │                               │
+       │                               │
 ┌──────▼───────┐                ┌──────▼──────┐
 │  Stable,     │                │ Tuned for   │
 │ interpretable│                │ better fit  │
 │ forecasts    │                │ on big data │
 └──────────────┘                └─────────────┘
-│
-│
-┌─────────▼─────────┐
+        │
+        │
+┌───────▼───────────┐
 │   Sequential /    │
 │  Short-term Data? │
-└─────────┬─────────┘
-│.        |
+└──────┬────────────┘
+       │.        
 ┌──────▼──────┐
 │    LSTM     │
 │ (captures   │
 │ sequence &  │
 │ memory)     │
 └─────────────┘
-    
+```    
 
 ### 🚀 Practical Usage
 
