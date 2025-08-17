@@ -8,3 +8,4 @@ mlruns/
 steamlitapp.py/
 ml_flow.ipynb/
 data_store_sales/*.csv
+!data_store_sales/.gitkeep
