@@ -33,13 +33,19 @@ Sales forecasting plays a crucial role in retail and supply chain optimization. 
 
 # 📂 Project Structure
 
-data_store_sales/    # Raw CSV files (items.csv, stores.csv, transactions.csv, oil.csv, holidays_events.csv, train.csv, etc.)
-DataLoad_EDA_Merging.ipynb                            # File 1 - Data loading, cleaning, preprocessing & EDA
-FeatureEng_BasicModel(ARIMA with exo feature).ipynb   # File 2 - Feature engineering & ARIMA/SARIMAX models
-XGBOOST_Model.ipynb                                   # File 3 - XGBoost baseline + tuned model
-LSTM_Model.ipynb                                      # File 4 - LSTM + tuned LSTM model
-saved_models/                                         # Trained model artifacts (XGBoost, ARIMA, LSTM)
-README.md                                             # Project documentation
+1. data_store_sales/.    # Raw CSV files (items.csv, stores.csv, transactions. csv, oil.csv, holidays_events.csv, train.csv, etc.)
+
+2. DataLoad_EDA_Merging.ipynb.    # File 1 - Data loading, cleaning, preprocessing & EDA
+
+3. FeatureEng_BasicModel(ARIMA with exo feature).ipynb   # File 2 - Feature engineering & ARIMA/SARIMAX models
+
+4. XGBOOST_Model.ipynb.    # File 3 - XGBoost baseline + tuned model
+
+5. LSTM_Model.ipynb.    # File 4 - LSTM + tuned LSTM model
+
+6. saved_models/.    # Trained model artifacts (XGBoost, ARIMA, LSTM)
+
+7. README.md.    # Project documentation
 
 # 📊 Dataset
 
@@ -186,7 +192,7 @@ Based on the comparison:
   - Tuned LSTM achieved lowest MAE/RMSE, but negative R² indicates poor generalization.
   - Useful for **short-term forecasts**, but not stable for production.
 
-- **✅ **Takeaway:**  
+- **✅ Takeaway:**  
   - Use **ARIMAX** if you want interpretability and external features matter.  
   - Use **XGBoost** if dataset is larger and has non-linear relationships.  
   - Use **LSTM** when sequential dependencies are critical (but validate carefully).  
@@ -199,7 +205,36 @@ When deciding which forecasting model to use:
             └─────────┬──────────┘
                       │
       ┌───────────────┴───────────────┐
-      │                               │
+Small / Medium Data             Large / Complex Data
+│                               │
+┌──────▼──────┐                 ┌──────▼───────┐
+│   ARIMAX    │                 │   XGBoost    │
+│ (best for   │                 │ (handles     │
+│ explainable │                 │ non-linear   │
+│ forecasts)  │                 │ features)    │
+└─────────────┘                 └──────────────┘
+│                               │
+│                               │
+│                               │
+┌──────▼───────┐                ┌──────▼──────┐
+│  Stable,     │                │ Tuned for   │
+│ interpretable│                │ better fit  │
+│ forecasts    │                │ on big data │
+└──────────────┘                └─────────────┘
+│
+│
+┌─────────▼─────────┐
+│   Sequential /    │
+│  Short-term Data? │
+└─────────┬─────────┘
+│.        |
+┌──────▼──────┐
+│    LSTM     │
+│ (captures   │
+│ sequence &  │
+│ memory)     │
+└─────────────┘
+    
 
 ### 🚀 Practical Usage
 
