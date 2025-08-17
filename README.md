@@ -249,6 +249,3 @@ tensorflow
 
 notebook
 ipykernel
-
-
-test
