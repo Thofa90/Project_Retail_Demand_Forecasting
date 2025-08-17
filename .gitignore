@@ -1,2 +1,10 @@
-data_store_sales/
+
 .DS_store
+app/
+data/
+model/
+.venv/
+mlruns/
+steamlitapp.py/
+ml_flow.ipynb/
+data_store_sales/
