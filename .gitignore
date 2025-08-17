@@ -7,4 +7,4 @@ model/
 mlruns/
 steamlitapp.py/
 ml_flow.ipynb/
-data_store_sales/
+data_store_sales/*.csv
